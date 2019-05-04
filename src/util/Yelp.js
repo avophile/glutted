@@ -10,7 +10,7 @@ const Yelp = {
             return response.json(); // converts the returned response to json
             }
         ).then((jsonResponse) => {
-            if (jsonResponse.businesses) { // do we have a buisness key within our json object
+            if (jsonResponse.businesses) { // do we have a business key within our json object
                 return jsonResponse.businesses.map((business) => { // iterate over each business object in our array
                    console.log(business);
                    return {
