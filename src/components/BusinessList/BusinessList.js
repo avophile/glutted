@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react';  // import the react library
 import './BusinessList.css';
-import Business from '../Business/Business.js';
+import Business from '../Business/Business.js';  //<BusinessList /> will make use of the <Business /> component repeatedly. To use the <Business /> component import it. 
 
 class BusinessList extends React.Component {
     constructor (props) {  // makes the BusinessList a stateful component that will initialize the prop
@@ -22,4 +22,4 @@ class BusinessList extends React.Component {
     }
 }
 
-export default BusinessList;
+export default BusinessList;  // This list component will need to be rendered again by another component, so export it. 

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react';  // import the react library
 import './Business.css';
 
-class Business extends React.Component {  
-  render() {                                    // most components will render JSX, the render function does not change any states, always renders JSX the same way
+class Business extends React.Component {  // create a React component called Business. business.property references a property in the business object
+  render() {                                    // most components have a method to render JSX, the render function does not change any states, always renders JSX the same way
      const { business } = this.props;
      return (
       <div className="Business">
@@ -12,7 +12,7 @@ class Business extends React.Component {
       <h2>{business.name}</h2>
       <div className="Business-information">
        <div className="Business-address">
-         <p>{business.address}</p>
+         <p>{business.address}</p>    
          <p>{business.city}</p>
          <p>{business.state} {business.zipCode}</p>
        </div>
@@ -27,4 +27,4 @@ class Business extends React.Component {
   }
 }
 
-export default Business;
+export default Business;  // makes the business component available to the rest of the Ravenous app

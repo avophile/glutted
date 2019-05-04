@@ -3,6 +3,7 @@ import './App.css';
 import BusinessList from '../src/components/BusinessList/BusinessList';
 import SearchBar from '../src/components/SearchBar/SearchBar';
 import Yelp from '../src/util/Yelp.js';
+import MyPosition from '../src/util/MyPosition.js';
 
 class App extends Component {
   constructor (props){
@@ -11,6 +12,7 @@ class App extends Component {
       businesses: [],
     };
     this.searchYelp = this.searchYelp.bind(this);
+   // this.findPosition = this.findPosition.bind(this);
   }
 
   searchYelp(term, location, sortBy) {
@@ -18,6 +20,13 @@ class App extends Component {
       this.setState({businesses: businesses});
     });
   }
+/*
+  findPosition(){
+    MyPosition.findPosition()=>{
+      this.setState({positions: positions});
+    }
+
+  }*/
 
   render() {
     return (
