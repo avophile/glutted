@@ -1,10 +1,16 @@
 const MyPosition = {
-    getPosition() {/*
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
+    getPosition(){
+        if (navigator.geolocation){ // device can return its location
+            navigator.geolocation.getCurrentPosition(function(position) {
+                 let latCoords=position.coords.latitude;
+                 let longCoords=position.coords.longitude;
+                 console.log(position.coords.latitude);
+                 console.log(position.coords.longitude);
+                 return(latCoords, longCoords);
+            })
         } else { 
-          x.innerHTML = "Geolocation is not supported by this browser.";
-        }*/
+          console.log ("Geolocation is not supported by this browser.");
+        }
     }
       /*
     showPosition(position) {
@@ -29,4 +35,3 @@ const MyPosition = {
       }*/
 };
 
-export default MyPosition;

@@ -1,0 +1,42 @@
+.Position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*background-image: url('./background_search_desktop.glutted.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+  }
+
+  .SearchBar-my-position {
+    width: 5rem;
+    padding: .66rem 1rem;
+   /* margin-right: 2.22rem;*/
+    border: 1px solid #fff;
+    background: #ffffff;
+    border-radius: 4px;
+    font-size: .77rem;
+    font-weight: 500;
+    text-align: center;
+    /*justify-content: center;*/
+  }
+  
+  
+  .SearchBar-get-position {
+    margin: 2em;
+    text-align: center;
+  }
+  
+  .SearchBar-get-position a {
+    border-radius: 4px;
+    padding: .72rem 1.7rem;
+    background-color: #187c1d;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color .5s;
+  }
+  
+  .SearchBar-get-position a:hover {
+    cursor: pointer;
+    background-color: #136b16;
+  }

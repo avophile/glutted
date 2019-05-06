@@ -1,8 +1,8 @@
 const apiKey = "vGGrSVt9JQzi123QyyotutBq0JBa6oX2hOWKXslxOeqHLg4xiIN6XX_g5kzzPpFA_7nYVplA4t1taNMBhe8cbJsr-U6xdREL-uOH218xQJxnVw-2LNM0BHSxHtKXXHYx";
 
 const Yelp = {
-    searchYelp(term, location, sortBy){
-        return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
+    searchYelp(term, location, sortBy){  // create search method and pass it three parameters
+        return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, { 
             headers:{
                 Authorization: `Bearer ${apiKey}`
             }
