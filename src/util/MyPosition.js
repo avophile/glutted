@@ -12,11 +12,7 @@ const MyPosition = {
           console.log ("Geolocation is not supported by this browser.");
         }
     }
-      /*
-    showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude + 
-        "<br>Longitude: " + position.coords.longitude;
-    }
+    
 /*
     calculateDistance(lat1, lon1, lat2, lon2) {
         var R = 6371; // km

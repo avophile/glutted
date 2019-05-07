@@ -14,17 +14,19 @@ class App extends Component {
       longCoords: null,
     };
     this.searchYelp = this.searchYelp.bind(this);
-   //this.getCurrentPosition = this.getCurrentPosition.bind(this);
   }
 
   componentWillMount(){
-    navigator.geolocation.getCurrentPosition(position => {
+    if (navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(position => {
           this.setState({
           latCoords: position.coords.latitude, 
           longCoords: position.coords.longitude
           });
-    }, err => console.log(err)
-    );
+      }, err => console.log(err));
+    } else { 
+      console.log ("Geolocation is not supported by this browser.");
+    }
   }
 
   searchYelp(term, location, sortBy) {
@@ -37,12 +39,7 @@ class App extends Component {
     return (
     <div className="App">
       <h1>glutted</h1>
-      <div >
-        <h2>Current Position:</h2>
-          <p>Latitude: {this.state.latCoords}</p>
-          <p>Longitude: {this.state.longCoords}</p>
-      </div>
-        {<Position getCurrentPosition={this.latCoords}/>}
+        {<Position/>}
         {<SearchBar searchYelp={this.searchYelp}/>}
         {<BusinessList businesses={this.state.businesses}/>} 
     </div>)   

@@ -53,18 +53,6 @@ class SearchBar extends React.Component {
       this.props.getCurrentPosition({latCoords: this.state.latCoords});
     }
 
-    renderGetCurrentPosition(){
-        
-        if (this.state.latcoords){
-        console.log(this.state.latcoords)
-        } else {
-          console.log('No latcoords!')
-        };
-       return <p>You are here:
-              Latitude: {this.state.latCoords}
-              Longitude: {this.state.latCoords}</p>
-    }
-
     renderSortByOptions() {   // this method dynamically creates the list of sort by options (right now retrieved from the sortByOption array above, later to be pulled from Yelp API)
        return Object.keys(sortByOptions).map(sortByOption => {   // To iterate through the object, you’ll need to start by accessing the keys of the sortByOptionsobject. Call the keys() method on the JavaScript Object library. Pass in sortByOptions as the argument. iterate over the keys and values of the sortByOption object and return a list item. The list item elements should use the keys as an attribute, and the values as content. .map takes a call back function as an object(sortByOption) returns an array of each element
             let sortByOptionValue = sortByOptions[sortByOption]; // storing the key property values accessed though the .map method. store the object values in a variable. Inside of the callback function, access the sortByOptions values using the sortByOption parameter of the callback function. Store values in variable called sortByOptionValue.
@@ -75,9 +63,6 @@ class SearchBar extends React.Component {
     render() {  
       return (
           <div className="SearchBar">
-            <div className="SearchBar-my-position">
-              {this.renderGetCurrentPosition()}
-            </div>
             <div className="SearchBar-sort-options">
               <ul>
                 {this.renderSortByOptions()}

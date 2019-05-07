@@ -8,7 +8,6 @@ class Position extends React.Component {
           latCoords: null,
           longCoords: null,
         };
-       //this.getCurrentPosition = this.getCurrentPosition.bind(this);
       }
     
       componentWillMount(){
@@ -27,9 +26,11 @@ class Position extends React.Component {
         } else {
           console.log('No latcoords!')
         };
-       return <p>You are here:
-              Latitude: {this.state.latCoords}
-              Longitude: {this.state.latCoords}</p>
+       return <div >
+       <h2>Current Position:</h2>
+         <p>Latitude: {this.state.latCoords}</p>
+         <p>Longitude: {this.state.longCoords}</p>
+     </div>
     }
 
     render() {  
